@@ -1,0 +1,40 @@
+@import "../main.scss";
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $main-blue-color;
+
+  .logo {
+    width: 8rem;
+    img {
+      width: 100%;
+    }
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    span {
+      font-size: 1.5rem;
+      padding: 1rem 1.5rem;
+      border-radius: 1rem;
+      color: white;
+
+      &:hover {
+        background-color: $main-blue-color-light;
+        a {
+          color: $main-blue-color;
+        }
+      }
+      a {
+        text-decoration: none;
+        color: white;
+      }
+    }
+  }
+}

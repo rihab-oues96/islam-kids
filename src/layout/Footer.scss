@@ -1,0 +1,19 @@
+@import "../main.scss";
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .image-footer {
+    background-image: url("../assets/images/footer.png");
+    background-position: center bottom;
+    background-repeat: repeat-x;
+
+    width: 100vw;
+    height: 9rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}

@@ -1,0 +1,35 @@
+@import "../main.scss";
+
+.tasks {
+  margin: 1rem;
+  position: relative;
+
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: $light-gray;
+    border-radius: 0.5rem;
+    width: 12rem;
+    padding: 1rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+    span {
+      font-size: 1rem;
+    }
+    img {
+      width: 1rem;
+      margin-right: 1rem;
+    }
+  }
+
+  .states {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
