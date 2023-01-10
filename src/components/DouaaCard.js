@@ -1,18 +1,17 @@
 import { useContext } from "react";
 import { AppContext } from "../context";
-import "./RoknCard.scss";
+import "./DouaaCard.scss";
 
-const RoknCard = ({ id, name, description, image, video }) => {
+const DouaaCard = ({ id, name, content, image, video }) => {
   const { openModal } = useContext(AppContext);
-
   return (
-    <div className="rokn-card" onClick={() =>openModal(video) }>
+    <div className="douaa-card" onClick={() => openModal(video)}>
       <div className="description">
         <p className="name">
           <span className="number">{id}</span>
           <span>{name}</span>
         </p>
-        <p>{description}</p>
+        <p className="content">{content}</p>
       </div>
       <div className="image">
         <img src={image} alt="img" />
@@ -21,4 +20,4 @@ const RoknCard = ({ id, name, description, image, video }) => {
   );
 };
 
-export default RoknCard;
+export default DouaaCard;

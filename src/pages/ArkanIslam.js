@@ -3,6 +3,7 @@ import "./ArkanIslam.scss";
 import RoknCard from "../components/RoknCrad";
 
 import { Islam } from "../data";
+import Modal from "../components/Modal";
 
 const ArkanIslam = () => {
   return (
@@ -12,6 +13,7 @@ const ArkanIslam = () => {
         {Islam.map((rokn) => (
           <RoknCard id={rokn.id} {...rokn} />
         ))}
+        <Modal />
       </div>
     </section>
   );

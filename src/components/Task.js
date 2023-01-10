@@ -1,17 +1,22 @@
 import sadaka from "../assets/images/sadaka.png";
-import trash from "../assets/icons/trash.svg";
+import plus from "../assets/icons/plus.svg";
 import "./Task.scss";
+import { AppContext } from "../context";
+import { useContext } from "react";
 
-const Task = () => {
+const Task = ({ name, image, options, id }) => {
+  const { addNewTask } = useContext(AppContext);
   return (
     <div className="task">
-      <div className="image">
-        <img src={sadaka} alt="sadaka-img" />
+      <div className="task-content">
+        <div className="image">
+          <img src={image} alt="sadaka-img" />
+        </div>
+        <p>{name}</p>
       </div>
-      <p>صدقة</p>
 
-      <div className="icon">
-        <img src={trash} alt="trash-icon" />
+      <div className="icon" onClick={() => addNewTask(id)}>
+        <img src={plus} alt="trash-icon" />
       </div>
     </div>
   );

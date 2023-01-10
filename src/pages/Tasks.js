@@ -1,3 +1,5 @@
+import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
+
 import { useContext } from "react";
 import { AppContext } from "../context";
 
@@ -20,7 +22,8 @@ const Tasks = () => {
       {isOpenListTasks && <TasksList />}
 
       <div className="states">
-        <TaskState title="قائمة المهام" style="backlog" />
+
+        <TaskState title="قائمة المهام" style="backlog" selectedTasks/>
         <TaskState title="في طور الإنجاز" style="in-progress" />
         <TaskState title="تم إنجازها" style="completed" />
       </div>

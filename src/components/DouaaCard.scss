@@ -1,15 +1,15 @@
 @import "../main.scss";
 
-.rokn-card {
+.douaa-card {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   box-shadow: 0px 2px 15px -2px rgb(185 187 198 / 50%);
   border: 1px dashed #dbdbdb;
-  width: 25rem;
+  width: 30rem;
   border-radius: 1rem;
-  padding: 1rem 2.5rem;
+  padding: 1rem;
   margin: 1rem;
 
   .description {
@@ -19,10 +19,11 @@
       font-weight: 700;
       margin-left: 0.5rem;
     }
-    p {
+    .content {
+      color: $dark-gray;
       font-size: 1rem;
       margin: 0.5rem 0;
-      width: 10rem;
+      width: 20rem;
     }
   }
 
