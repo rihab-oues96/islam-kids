@@ -19,6 +19,8 @@ import douaPray from "./assets/images/doua-pray.png";
 import wearing from "./assets/images/wearing.png";
 import eating from "./assets/images/eating.png";
 import home from "./assets/images/home.png";
+import toilet from "./assets/images/toilet.png";
+import travel from "./assets/images/travel.png";
 
 export const Islam = [
   {
@@ -158,21 +160,20 @@ export const douaa = [
     content:
       "اللهم إني أسألك خير المولج، وخير المخرج، بسم الله ولجنا، وبسم الله خرجنا، وعلى الله ربنا توكلنا",
   },
-
   {
     id: "07",
     name: "دعاء دخول الخلاء",
-    image: "",
-    content: "",
+    image: toilet,
+    content: `اللهم أعوذ بك من الخبث والخبائث,  عند الخروج من الحمام "غفرانك"`,
   },
-
   {
     id: "08",
     name: "دعاء السفر",
-    image: "",
-    content: "",
+    image: travel,
+    content: `بسم الله الحمدلله سبحان الذي سخر لنا هذا وما كنا له مقرنين وإنا الى ربنا لمنقلبون ،
+الحمد لله الحمد لله الحمد لله الله أكبر الله أكبر الله أكبر ، سبحانك اللهم إني ظلمت نفسي فاغفر لي،
+فإنه لا يغفر الذنوب الا أنت`,
   },
-
   {
     id: "09",
     name: "دعاء المرض",

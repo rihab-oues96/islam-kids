@@ -11,7 +11,8 @@ import plus from "../assets/icons/plus.svg";
 import "./Tasks.scss";
 
 const Tasks = () => {
-  const { isOpenListTasks, openListTask } = useContext(AppContext);
+  const { isOpenListTasks, openListTask, closeListTask } =
+    useContext(AppContext);
   return (
     <section className="tasks">
       <div className="btn" onClick={openListTask}>
@@ -21,12 +22,13 @@ const Tasks = () => {
 
       {isOpenListTasks && <TasksList />}
 
-      <div className="states">
-
-        <TaskState title="قائمة المهام" style="backlog" selectedTasks/>
-        <TaskState title="في طور الإنجاز" style="in-progress" />
-        <TaskState title="تم إنجازها" style="completed" />
-      </div>
+      <DragDropContext>
+        <div className="states characters" onClick={closeListTask}>
+          <TaskState title="قائمة المهام" style="backlog" />
+          <TaskState title="في طور الإنجاز " style="in-progress" />
+          <TaskState title="تم إنجازها " style="completed" />
+        </div>
+      </DragDropContext>
     </section>
   );
 };

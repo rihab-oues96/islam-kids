@@ -1,14 +1,12 @@
 import { useContext } from "react";
 import { AppContext } from "../context";
-import { Tasks } from "../data";
+
 import close from "../assets/icons/close.svg";
 import Task from "./Task";
 import "./TasksList.scss";
 
-const maham = Tasks;
-
 const TasksList = () => {
-  const { closeListTask } = useContext(AppContext);
+  const { closeListTask, tasksList } = useContext(AppContext);
   return (
     <div className="task-list">
       <div className="task-list-heading">
@@ -20,8 +18,8 @@ const TasksList = () => {
       </div>
 
       <div className="tasks">
-        {maham.map((item) => (
-          <Task id={item.id} {...item} />
+        {tasksList.map((item, index) => (
+          <Task key={index} id={item.id} {...item} style="task-list" />
         ))}
       </div>
     </div>

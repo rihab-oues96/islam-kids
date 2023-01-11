@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { AppContext } from "../context";
 
 const TaskState = ({ title, style }) => {
-  const { selectedTasks } = useContext(AppContext);
+  const { selectedTasks, inProgressTasks, doneTasks } = useContext(AppContext);
 
   return (
     <div className={`state ${style}`}>
@@ -14,8 +14,36 @@ const TaskState = ({ title, style }) => {
 
       <div className="state-content">
         {style === "backlog" &&
-          selectedTasks.map((item) => (
-            <Task name={item.name} image={item.image} id={item.id} />
+          selectedTasks.map((item, index) => (
+            <Task
+              key={index}
+              name={item.name}
+              image={item.image}
+              id={item.id}
+              style={style}
+            />
+          ))}
+
+        {style === "in-progress" &&
+          inProgressTasks.map((item, index) => (
+            <Task
+              key={index}
+              name={item.name}
+              image={item.image}
+              id={item.id}
+              style={style}
+            />
+          ))}
+
+        {style === "completed" &&
+          doneTasks.map((item, index) => (
+            <Task
+              key={index}
+              name={item.name}
+              image={item.image}
+              id={item.id}
+              style={style}
+            />
           ))}
       </div>
     </div>

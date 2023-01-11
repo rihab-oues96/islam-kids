@@ -2,10 +2,38 @@
 
 .arkan-islam {
   padding: 1rem;
-  h2 {
-    font-size: 1.5rem;
-    margin: 2rem;
+  display: flex;
+  flex-direction: column;
+
+  .arkan-heading {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0px 2px 15px -2px rgb(185 187 198 / 50%);
+    border: 1px dashed #dbdbdb;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-top: 2rem;
+    width: 45rem;
+
+    .image {
+      margin-left: 1rem;
+      img {
+        width: 100%;
+        border-radius: 2rem;
+      }
+    }
+
+    p {
+      line-height: 2rem;
+      font-size: 1.2rem;
+      padding: 1rem;
+      span {
+        color: $dark-green;
+      }
+    }
   }
+
   .cards {
     display: flex;
     flex-direction: row;

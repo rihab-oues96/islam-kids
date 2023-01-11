@@ -1,50 +1,38 @@
 @import "../main.scss";
 
+.overlay {
+  background: rgba(99, 99, 99, 0.605);
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
 .navbar {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  position: relative;
+  justify-content: space-between;
+  background: $main-blue-color;
   padding: 2rem;
-
-  background: $primary-color;
   width: 20rem;
   height: 100vh;
+  z-index: 10;
 
   .nav {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin-bottom: 1rem;
 
-    .page-name {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      margin-bottom: 1rem;
-      padding-left: 1rem;
-      width: 15rem;
-      height: 3.5rem;
-      border-radius: 5px;
+    span {
+      font-size: 1.5rem;
+      padding: 1rem 1.5rem;
+      border-radius: 1rem;
+      text-align: right;
+      color: white;
 
-      &:hover {
-        background: $primary-light-color;
-        cursor: pointer;
-      }
-
-      .icon {
-        width: 1.5rem;
-        margin-right: 2rem;
-        img {
-          width: 100%;
-          filter: invert(80%) sepia(2%) saturate(941%) hue-rotate(194deg)
-            brightness(94%) contrast(92%);
-        }
-      }
-
-      p {
-        color: $light-gray;
-        text-align: left;
-        font-size: 1.3rem;
+      a {
+        text-decoration: none;
+        color: white;
       }
     }
   }
@@ -52,28 +40,22 @@
   .logout {
     display: flex;
     flex-direction: row;
-    position: absolute;
-    bottom: 2rem;
-    margin-top: 60vh;
-    padding-left: 1rem;
-
-    &:hover {
-      cursor: pointer;
-    }
-    .icon {
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    width: 12rem;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+      rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-radius: 1rem;
+    img {
       width: 1.5rem;
-      margin-right: 2rem;
-      img {
-        width: 100%;
-        filter: invert(80%) sepia(2%) saturate(941%) hue-rotate(194deg)
-          brightness(94%) contrast(92%);
-      }
+      filter: invert(92%) sepia(100%) saturate(0%) hue-rotate(278deg)
+        brightness(104%) contrast(106%);
     }
-
     p {
-      color: $light-gray;
-      text-align: left;
-      font-size: 1.3rem;
+      font-size: 1.5rem;
+      margin-left: 0.5rem;
+      color: white;
     }
   }
 }

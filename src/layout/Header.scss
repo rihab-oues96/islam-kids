@@ -2,12 +2,14 @@
 
 .header {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-around;
   background-color: $main-blue-color;
 
   .logo {
-    width: 8rem;
+    width: 10rem;
+    margin: 0 4rem;
     img {
       width: 100%;
     }
@@ -35,6 +37,75 @@
         text-decoration: none;
         color: white;
       }
+
+      a.active {
+        padding: 1rem 1.5rem;
+        border-radius: 1rem;
+        background-color: $main-blue-color-light;
+        color: $main-blue-color;
+      }
+    }
+  }
+
+  .logout {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    width: 12rem;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+      rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-radius: 1rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+    img {
+      width: 1.5rem;
+      filter: invert(92%) sepia(100%) saturate(0%) hue-rotate(278deg)
+        brightness(104%) contrast(106%);
+    }
+    p {
+      font-size: 1.5rem;
+      margin-left: 0.5rem;
+      color: white;
+    }
+  }
+
+  .hamberger-icon {
+    width: 2.5rem;
+    display: none;
+    img {
+      width: 100%;
+      filter: invert(92%) sepia(100%) saturate(0%) hue-rotate(278deg)
+        brightness(104%) contrast(106%);
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .header {
+    .logo {
+      width: 8rem;
+      margin: 0 2rem;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    justify-content: space-between;
+    padding: 0 2rem;
+    .nav {
+      display: none;
+    }
+    .logout {
+      display: none;
+    }
+
+    .hamberger-icon {
+      display: initial;
     }
   }
 }

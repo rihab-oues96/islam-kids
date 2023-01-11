@@ -22,8 +22,8 @@ const Douaa = () => {
         </div>
       </div>
       <div className="douaa-cards">
-        {douaa.map((rokn) => (
-          <DouaaCard id={rokn.id} {...rokn} />
+        {douaa.map((rokn, index) => (
+          <DouaaCard key={index} id={rokn.id} {...rokn} />
         ))}
         <Modal />
       </div>
