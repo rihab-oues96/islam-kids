@@ -8,12 +8,19 @@ import Tasks from "./pages/Tasks.js";
 import Douaa from "./pages/Douaa.js";
 import { useContext } from "react";
 import { AppContext } from "./context.js";
+import Login from "./pages/Login.js";
+import Signup from "./pages/Signup.js";
 
 function App() {
   const { isNavbarOpen } = useContext(AppContext);
   return (
     <div dir="rtl">
       <BrowserRouter>
+        {/* <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="register" element={<Signup />} />
+        </Routes> */}
+
         <Header />
         {isNavbarOpen && <Navbar />}
         <Routes>
