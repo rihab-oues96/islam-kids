@@ -1,0 +1,91 @@
+@import "../main.scss";
+
+.login {
+  background-image: url("../assets/images/header-bg.jpg");
+  //   background-repeat: no-repeat;
+  //   background-size: contain;
+
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px,
+      rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+    background-color: white;
+    border-radius: 2rem;
+    padding: 4rem;
+
+    .logo {
+      width: 12rem;
+      align-self: center;
+      img {
+        width: 100%;
+      }
+    }
+
+    .text-area {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      input {
+        border: 1px dashed #dbdbdb;
+        outline: none;
+        padding: 1rem;
+        border-radius: 1rem;
+        width: 25rem;
+        height: 3rem;
+      }
+
+      p {
+        color: $main-blue-color;
+        font-size: 1.25rem;
+      }
+    }
+
+    .question {
+      display: flex;
+      flex-direction: column;
+
+      p {
+        color: $light-gray;
+        font-size: 1rem;
+        margin-bottom: 5px;
+
+        &:hover {
+          color: $main-blue-color;
+          cursor: pointer;
+        }
+      }
+    }
+    .btn {
+      background-color: $main-blue-color;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      border-radius: 1rem;
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+      }
+
+      &:active {
+        opacity: 0.4;
+      }
+      p {
+        color: white;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

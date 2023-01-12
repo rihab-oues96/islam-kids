@@ -72,32 +72,26 @@ const AppProvider = ({ children }) => {
       setDoneTasks(newDoneTasks);
     }
   };
-
-  return (
-    <AppContext.Provider
-      value={{
-        isOpenListTasks,
-        selectedTasks,
-        isModalOpen,
-        isNavbarOpen,
-        tasksList,
-        videoUrl,
-        inProgressTasks,
-        doneTasks,
-        openListTask,
-        closeListTask,
-        addNewTask,
-        deleteTask,
-        openModal,
-        closeModal,
-        navbarTarget,
-        InProgressTaskHandler,
-        doneTaskHandler,
-      }}
-    >
-      {children}
-    </AppContext.Provider>
-  );
+  const value = {
+    isOpenListTasks,
+    selectedTasks,
+    isModalOpen,
+    isNavbarOpen,
+    tasksList,
+    videoUrl,
+    inProgressTasks,
+    doneTasks,
+    openListTask,
+    closeListTask,
+    addNewTask,
+    deleteTask,
+    openModal,
+    closeModal,
+    navbarTarget,
+    InProgressTaskHandler,
+    doneTaskHandler,
+  };
+  return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };
 
 export { AppContext, AppProvider };

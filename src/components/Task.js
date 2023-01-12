@@ -29,7 +29,12 @@ const Task = ({ name, image, id, style }) => {
 
       <div className="icon">
         {style === "task-list" && (
-          <img src={plus} alt="plus-icon" onClick={() => addNewTask(id)} />
+          <img
+            src={plus}
+            alt="plus-icon"
+            className="task-list-icon"
+            onClick={() => addNewTask(id)}
+          />
         )}
         {style === "backlog" && (
           <img
