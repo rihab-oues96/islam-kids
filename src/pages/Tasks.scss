@@ -1,7 +1,6 @@
 @import "../main.scss";
 
 .tasks {
-  margin: 1rem;
   position: relative;
 
   .btn {
@@ -11,6 +10,7 @@
     background-color: $light-gray;
     border-radius: 0.5rem;
     width: 12rem;
+    margin: 1rem;
     padding: 1rem;
 
     &:hover {

@@ -6,9 +6,20 @@ import hamberger from "../assets/icons/menu-burger.svg";
 import "./Header.scss";
 import { useContext } from "react";
 import { AppContext } from "../context";
+import { AuthContext } from "../AuthContext";
+import { async } from "@firebase/util";
 
 const Header = () => {
   const { navbarTarget } = useContext(AppContext);
+  const { user, logOutHandler } = useContext(AuthContext);
+
+  const logOut = async () => {
+    try {
+      await logOutHandler();
+    } catch (err) {
+      console.log(err);
+    }
+  };
   return (
     <section className="header">
       <div className="logo">
@@ -16,17 +27,17 @@ const Header = () => {
       </div>
       <div className="nav">
         <span>
-          <NavLink to="/">مهامي</NavLink>
+          <NavLink to="/tasks">مهامي</NavLink>
         </span>
         <span>
-          <NavLink to="arkan-islam"> أركان اسلامي</NavLink>
+          <NavLink to="/arkan-islam"> أركان اسلامي</NavLink>
         </span>
         <span>
-          <NavLink to="douaa">أدعيتي و أذكاري</NavLink>
+          <NavLink to="/douaa">أدعيتي و أذكاري</NavLink>
         </span>
       </div>
 
-      <div className="logout">
+      <div className="logout" onClick={logOut}>
         <p>مغادرة</p>
         <img src={logout} alt="logout-icon" />
       </div>

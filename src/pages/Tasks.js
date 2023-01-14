@@ -9,12 +9,15 @@ import TasksList from "../components/TasksList";
 import plus from "../assets/icons/plus.svg";
 
 import "./Tasks.scss";
+import Header from "../layout/Header";
+import Footer from "../layout/Footer";
 
 const Tasks = () => {
   const { isOpenListTasks, openListTask, closeListTask } =
     useContext(AppContext);
   return (
     <section className="tasks">
+      <Header />
       <div className="btn" onClick={openListTask}>
         <span>أضف مهمة جديدة</span>
         <img src={plus} />
@@ -29,6 +32,7 @@ const Tasks = () => {
           <TaskState title="تم إنجازها " style="completed" />
         </div>
       </DragDropContext>
+      <Footer />
     </section>
   );
 };

@@ -2,11 +2,14 @@ import doua from "../assets/images/doua-girl.png";
 import DouaaCard from "../components/DouaaCard";
 import Modal from "../components/Modal";
 import { douaa } from "../data";
+import Footer from "../layout/Footer";
+import Header from "../layout/Header";
 import "./Douaa.scss";
 
 const Douaa = () => {
   return (
     <section className="douaa">
+      <Header />
       <div className="douaa-heading">
         <p>
           قال تعالى: ﴿
@@ -27,6 +30,7 @@ const Douaa = () => {
         ))}
         <Modal />
       </div>
+      <Footer />
     </section>
   );
 };

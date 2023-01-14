@@ -14,12 +14,17 @@ const AuthProvider = ({ children }) => {
   const [user, setUser] = useState("");
 
   const logInHandler = (email, password) => {
-    return signInWithEmailAndPassword(auth, email, password);
+    return signInWithEmailAndPassword(getAuth(), email, password);
   };
 
   function signUpHandler(email, password) {
     return createUserWithEmailAndPassword(getAuth(), email, password);
   }
+
+  const logOutHandler = () => {
+    const auth = getAuth();
+    return signOut(auth);
+  };
 
   useEffect(() => {
     const auth = getAuth();
@@ -32,7 +37,7 @@ const AuthProvider = ({ children }) => {
     };
   }, []);
 
-  const value = { user, signUpHandler, logInHandler };
+  const value = { user, signUpHandler, logInHandler, logOutHandler };
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 };
 
