@@ -36,7 +36,8 @@ const Signup = () => {
 
         {error && (
           <div className="alert">
-            <p> {error}</p>
+            <p>خطأ في ادخال المعطيات </p>
+            <p>أعد المحاولة</p>
           </div>
         )}
 
