@@ -2,9 +2,6 @@
 
 .login {
   background-image: url("../assets/images/header-bg.jpg");
-  //   background-repeat: no-repeat;
-  //   background-size: contain;
-
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -23,11 +20,33 @@
     border-radius: 2rem;
     padding: 4rem;
 
+    h2 {
+      color: $main-blue-color;
+      align-self: center;
+      font-size: 2rem;
+    }
+
     .logo {
       width: 12rem;
       align-self: center;
       img {
         width: 100%;
+      }
+    }
+
+    .alert {
+      background-color: $error-light-color;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      align-self: center;
+      border: 1px dashed $error-dark-color;
+      padding: 1rem;
+      border-radius: 1rem;
+      width: 25rem;
+
+      p {
+        color: $error-dark-color;
       }
     }
 
@@ -55,6 +74,9 @@
       display: flex;
       flex-direction: column;
 
+      a {
+        text-decoration: none;
+      }
       p {
         color: $light-gray;
         font-size: 1rem;
@@ -85,6 +107,55 @@
       p {
         color: white;
         font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .login {
+    form {
+      gap: 1rem;
+      padding: 2rem;
+      h2 {
+        font-size: 1.5rem;
+      }
+      border-radius: 0;
+      width: 100vw;
+      height: 100vh;
+
+      .logo {
+        width: 10rem;
+      }
+
+      .text-area {
+        input {
+          width: 20rem;
+        }
+        p {
+          font-size: 1rem;
+        }
+      }
+      .btn {
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .login {
+    form {
+      .logo {
+        width: 8rem;
+      }
+
+      .text-area {
+        input {
+          width: 16rem;
+        }
       }
     }
   }

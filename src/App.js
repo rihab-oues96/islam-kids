@@ -1,17 +1,18 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Navbar from "./layout/Navbar.js";
 import ArkanIslam from "./pages/ArkanIslam.js";
 import Tasks from "./pages/Tasks.js";
 import Douaa from "./pages/Douaa.js";
-import { useContext } from "react";
-import { AppContext } from "./context.js";
 import Login from "./pages/Login.js";
 import Signup from "./pages/Signup.js";
 import ProtectedRoute from "./components/ProtectedRoute";
+import Navbar from "./layout/Navbar.js";
+import { useContext } from "react";
+import { AppContext } from "./context.js";
 
 function App() {
   const { isNavbarOpen } = useContext(AppContext);
+
   return (
     <div dir="rtl">
       <BrowserRouter>
@@ -19,7 +20,6 @@ function App() {
           <Route path="/" element={<Login />} />
           <Route path="register" element={<Signup />} />
         </Routes>
-
         {isNavbarOpen && <Navbar />}
         <Routes>
           <Route

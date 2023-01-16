@@ -12,7 +12,7 @@ const Navbar = () => {
         <div className="navbar">
           <div className="nav">
             <span>
-              <Link to="/">مهامي</Link>
+              <Link to="tasks">مهامي</Link>
             </span>
             <span>
               <Link to="arkan-islam"> أركان اسلامي</Link>

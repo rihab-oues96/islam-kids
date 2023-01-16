@@ -1,4 +1,6 @@
 import { NavLink } from "react-router-dom";
+import Navbar from "./Navbar";
+
 import logo from "../assets/images/logo.png";
 import logout from "../assets/icons/logout.svg";
 import hamberger from "../assets/icons/menu-burger.svg";
@@ -7,11 +9,10 @@ import "./Header.scss";
 import { useContext } from "react";
 import { AppContext } from "../context";
 import { AuthContext } from "../AuthContext";
-import { async } from "@firebase/util";
 
 const Header = () => {
-  const { navbarTarget } = useContext(AppContext);
-  const { user, logOutHandler } = useContext(AuthContext);
+  const { navbarTarget, isNavbarOpen } = useContext(AppContext);
+  const { logOutHandler } = useContext(AuthContext);
 
   const logOut = async () => {
     try {
@@ -45,6 +46,7 @@ const Header = () => {
       <div className="hamberger-icon" onClick={navbarTarget}>
         <img src={hamberger} alt="berger-icon" />
       </div>
+     
     </section>
   );
 };

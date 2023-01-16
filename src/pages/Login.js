@@ -28,19 +28,20 @@ const Login = () => {
   return (
     <section className="login">
       <form>
+        <h2> تسجيل الدخول</h2>
         <div className="logo">
           <img src={logo} alt="logo_img" />
         </div>
 
         {error && (
           <div className="alert">
-            <p>خطأ في المعطيات </p>
+            <p>خطأ في ادخال المعطيات </p>
             <p>أعد المحاولة</p>
           </div>
         )}
 
         <div className="text-area">
-          <p>ايميل المستخدم</p>
+          <p>البريد الالكتروني </p>
           <input
             type="text"
             placeholder=" أدخل الايميل"
@@ -56,9 +57,9 @@ const Login = () => {
           />
         </div>
         <div className="question">
-          <p>نسيت كلمة السر؟</p>
+          {/* <p>نسيت كلمة السر؟</p> */}
           <Link to="register">
-            <p>سجل</p>
+            <p>أنشئ حسابك</p>
           </Link>
         </div>
 

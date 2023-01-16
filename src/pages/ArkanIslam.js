@@ -1,6 +1,8 @@
 import RoknCard from "../components/RoknCrad";
 import arkanislam from "../assets/images/arkanIslam.png";
 import Modal from "../components/Modal";
+import Header from "../layout/Header";
+import Footer from "../layout/Footer";
 
 import { Islam } from "../data";
 import "./ArkanIslam.scss";
@@ -8,6 +10,7 @@ import "./ArkanIslam.scss";
 const ArkanIslam = () => {
   return (
     <section className="arkan-islam">
+      <Header />
       <div className="arkan-heading">
         <div className="image">
           <img src={arkanislam} alt="arkan-islam-image"></img>
@@ -30,6 +33,7 @@ const ArkanIslam = () => {
         ))}
         <Modal />
       </div>
+      <Footer />
     </section>
   );
 };

@@ -28,6 +28,8 @@ const Signup = () => {
   return (
     <section className="signup">
       <form onSubmit={handleSubmit}>
+        <h2> صفحة التسجيل </h2>
+
         <div className="logo">
           <img src={logo} alt="logo_img" />
         </div>

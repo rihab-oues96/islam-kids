@@ -21,6 +21,7 @@ import eating from "./assets/images/eating.png";
 import home from "./assets/images/home.png";
 import toilet from "./assets/images/toilet.png";
 import travel from "./assets/images/travel.png";
+import outass from "./assets/images/outass.png";
 
 export const Islam = [
   {
@@ -144,6 +145,7 @@ export const douaa = [
     name: "دعاء لبس الثياب",
     image: wearing,
     content: " الحمد لله الذي كساني هذا ورزقنيه من غير حول مني ولا قوة",
+    video: "https://www.youtube.com/embed/f8WCO61el4o?start=7",
   },
 
   {
@@ -151,6 +153,7 @@ export const douaa = [
     name: " أذكار الطعام",
     image: eating,
     content: " الحمد لله الذي أطعمني هذا ورزقنيه من غير حول مني و لا قوة ",
+    video: "https://www.youtube.com/embed/zDLjCzEaQuk?controls=0&amp;start=4",
   },
 
   {
@@ -159,12 +162,14 @@ export const douaa = [
     image: home,
     content:
       "اللهم إني أسألك خير المولج، وخير المخرج، بسم الله ولجنا، وبسم الله خرجنا، وعلى الله ربنا توكلنا",
+    video: "https://www.youtube.com/embed/GcC562TIakA?controls=0",
   },
   {
     id: "07",
     name: "دعاء دخول الخلاء",
     image: toilet,
     content: `اللهم أعوذ بك من الخبث والخبائث,  عند الخروج من الحمام "غفرانك"`,
+    video: "https://www.youtube.com/embed/YHjvwuZkM4A?controls=0",
   },
   {
     id: "08",
@@ -173,32 +178,15 @@ export const douaa = [
     content: `بسم الله الحمدلله سبحان الذي سخر لنا هذا وما كنا له مقرنين وإنا الى ربنا لمنقلبون ،
 الحمد لله الحمد لله الحمد لله الله أكبر الله أكبر الله أكبر ، سبحانك اللهم إني ظلمت نفسي فاغفر لي،
 فإنه لا يغفر الذنوب الا أنت`,
-  },
-  {
-    id: "09",
-    name: "دعاء المرض",
-    image: "",
-    content: "",
+    video: "https://www.youtube.com/embed/TeiUY-MB-tE?start=4",
   },
 
   {
     id: "010",
     name: " دعاء العطاس والتثاؤب",
-    image: "",
-    content: "",
-  },
-
-  {
-    id: "011",
-    name: "دعاء المطر و الرعد و الرياح",
-    image: "",
-    content: "",
-  },
-
-  {
-    id: "012",
-    name: "دعاء السوق",
-    image: "",
-    content: "",
+    image: outass,
+    content:
+      "(عن النبي صلى الله عليه وسلم قال: (إذا عطس أحدكم، فليقل: الحمد لله، وليقُلْ له أخوه أو صاحبه: يرحمك الله، فإذا قال له: يرحمك الله، فليقل: يَهدِيكم الله ويُصلِح بالكم",
+    video: "https://www.youtube.com/embed/eIAHucVibzM?controls=0",
   },
 ];
