@@ -8,20 +8,28 @@ import "./Signup.scss";
 const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  // const [confirmPassword, setConfirmPassword] = useState("");
 
   const [error, setError] = useState("");
+  const [confirm, setConfirm] = useState("");
 
-  const { signUpHandler } = useContext(AuthContext);
+  const { signUpHandler , logInHandler } = useContext(AuthContext);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
     try {
       await signUpHandler(email, password);
+      logInHandler(email, password)
+      setConfirm("تم التسجيل ");
+      setInterval(() => {
+        setConfirm("");
+      }, 3000);
     } catch (err) {
       console.log(err);
       setError(err.message);
+      setTimeout(() => {
+        setError("");
+      }, 3000);
     }
   };
 
@@ -40,6 +48,8 @@ const Signup = () => {
             <p>أعد المحاولة</p>
           </div>
         )}
+
+        {confirm && <div className="confirm">{confirm} </div>}
 
         <div className="text-area">
           <p>البريد الالكتروني </p>

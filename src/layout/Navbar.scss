@@ -12,7 +12,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding:  1rem 2rem;
+  padding: 1rem 2rem;
   width: 100vw;
   z-index: 10;
   position: absolute;
@@ -26,7 +26,7 @@
 
     span {
       font-size: 1.25rem;
-      padding: 1rem ;
+      padding: 1rem;
       border-radius: 1rem;
       text-align: right;
       color: white;
@@ -60,5 +60,12 @@
       margin-left: 0.5rem;
       color: white;
     }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .navbar {
+    top: 6rem;
+    flex-direction: column;
   }
 }

@@ -50,6 +50,22 @@
       }
     }
 
+    .confirm {
+      background-color: $light-green;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      align-self: center;
+      border: 1px dashed $dark-green;
+      padding: 1rem;
+      border-radius: 1rem;
+      width: 25rem;
+
+      p {
+        color: $dark-green;
+      }
+    }
+
     .text-area {
       display: flex;
       flex-direction: column;
