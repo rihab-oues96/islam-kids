@@ -29,6 +29,10 @@
     filter: invert(99%) sepia(1%) saturate(1152%) hue-rotate(309deg)
       brightness(93%) contrast(86%);
 
+      &:hover {
+        cursor: pointer;
+      }
+
     img {
       width: 100%;
     }
@@ -57,12 +61,17 @@
     width: 1.5rem;
     margin-left: 1rem;
 
+    &:hover {
+      cursor: pointer;
+    }
+
     img {
       width: 100%;
     }
   }
   .task-list-icon {
-    
+    filter: invert(83%) sepia(12%) saturate(173%) hue-rotate(193deg)
+      brightness(92%) contrast(83%);
   }
   .done-icon {
     filter: invert(30%) sepia(21%) saturate(933%) hue-rotate(100deg)

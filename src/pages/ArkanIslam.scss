@@ -43,3 +43,16 @@
     justify-content: center;
   }
 }
+
+@media screen and (max-width: 425px) {
+  .arkan-islam {
+    .arkan-heading {
+      flex-direction: column;
+      width: 25rem;
+      .image {
+        align-self: center;
+        width: 10rem;
+      }
+    }
+  }
+}

@@ -45,10 +45,23 @@
   }
 }
 
+
 @media screen and (max-width: 768px) {
   .douaa {
     .douaa-heading {
       width: 30rem;
+      flex-direction: column-reverse;
+      .image {
+        width: 10rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .douaa {
+    .douaa-heading {
+      width: 25rem;
       flex-direction: column-reverse;
       .image {
         width: 10rem;

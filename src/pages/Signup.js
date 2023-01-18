@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link , useNavigate} from "react-router-dom";
 import logo from "../assets/images/logo.png";
 import { AuthContext } from "../AuthContext";
 
@@ -13,6 +13,7 @@ const Signup = () => {
   const [confirm, setConfirm] = useState("");
 
   const { signUpHandler , logInHandler } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -21,6 +22,7 @@ const Signup = () => {
       await signUpHandler(email, password);
       logInHandler(email, password)
       setConfirm("تم التسجيل ");
+      navigate("/");
       setInterval(() => {
         setConfirm("");
       }, 3000);

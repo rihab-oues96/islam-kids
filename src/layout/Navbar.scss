@@ -67,5 +67,9 @@
   .navbar {
     top: 6rem;
     flex-direction: column;
+    .logout {
+      margin-top: 2rem;
+      align-self: flex-start;
+    }
   }
 }
