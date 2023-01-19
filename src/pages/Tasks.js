@@ -1,6 +1,6 @@
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AppContext } from "../context";
 
 import TaskState from "../components/TaskState";
@@ -12,9 +12,30 @@ import "./Tasks.scss";
 import Header from "../layout/Header";
 import Footer from "../layout/Footer";
 
+import ReactConfetti from "react-confetti";
+import { useSearchParams } from "react-router-dom";
+
 const Tasks = () => {
-  const { isOpenListTasks, openListTask, closeListTask } =
+  const { isOpenListTasks, openListTask, closeListTask, confetti } =
     useContext(AppContext);
+  const [windowDimension, setWindowDimension] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+
+  const DetectSize = () => {
+    setWindowDimension({
+      width: window.innerWidth,
+      height: window.innerHeight,
+    });
+
+    useEffect(() => {
+      window.addEventListener("resize", DetectSize);
+      return () => {
+        window.removeEventListener("resize", DetectSize);
+      };
+    }, [windowDimension]);
+  };
   return (
     <section className="tasks">
       <Header />
@@ -24,6 +45,12 @@ const Tasks = () => {
       </div>
 
       {isOpenListTasks && <TasksList />}
+      {confetti && (
+        <ReactConfetti
+          width={windowDimension.width}
+          height={windowDimension.height}
+        />
+      )}
 
       <DragDropContext>
         <div className="states characters" onClick={closeListTask}>

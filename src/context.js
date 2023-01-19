@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import { Tasks } from "./data";
 
@@ -13,6 +13,7 @@ const AppProvider = ({ children }) => {
   const [videoUrl, setVideoUrl] = useState();
   const [inProgressTasks, setInProgressTasks] = useState([]);
   const [doneTasks, setDoneTasks] = useState([]);
+  const [confetti, setConfetti] = useState(false);
 
   const openListTask = () => {
     setIsOpenListTasks(true);
@@ -54,6 +55,10 @@ const AppProvider = ({ children }) => {
     setDoneTasks([...doneTasks, doneTask]);
     const newInProgressTasks = inProgressTasks.filter((item) => item.id !== id);
     setInProgressTasks(newInProgressTasks);
+    setConfetti(true);
+    setTimeout(() => {
+      setConfetti(false);
+    }, 4500);
   };
 
   const deleteTask = (id, style) => {
@@ -81,6 +86,7 @@ const AppProvider = ({ children }) => {
     videoUrl,
     inProgressTasks,
     doneTasks,
+    confetti,
     openListTask,
     closeListTask,
     addNewTask,
