@@ -10,6 +10,7 @@
   margin-top: 1rem;
   height: 30rem;
   z-index: 10;
+  right: 1rem;
 
   .task-list-heading {
     display: flex;
@@ -24,6 +25,11 @@
     .icon-close {
       width: 1rem;
 
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.25);
+      }
+
       img {
         width: 100%;
       }
@@ -35,5 +41,11 @@
     height: 22rem;
     overflow-y: scroll;
     scrollbar-width: thin;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .task-list {
+    width: 22rem;
   }
 }

@@ -16,6 +16,35 @@
     padding: 1rem;
     margin-top: 2rem;
     width: 45rem;
+    animation: headAnim 2s ease-in 0s 1 normal forwards;
+
+    @keyframes headAnim {
+      0% {
+        animation-timing-function: ease-out;
+        transform: scale(1);
+        transform-origin: center center;
+      }
+
+      10% {
+        animation-timing-function: ease-in;
+        transform: scale(0.91);
+      }
+
+      17% {
+        animation-timing-function: ease-out;
+        transform: scale(0.98);
+      }
+
+      33% {
+        animation-timing-function: ease-in;
+        transform: scale(0.87);
+      }
+
+      45% {
+        animation-timing-function: ease-out;
+        transform: scale(1);
+      }
+    }
 
     .image {
       margin-left: 1rem;
@@ -48,11 +77,22 @@
   .arkan-islam {
     .arkan-heading {
       flex-direction: column;
-      width: 25rem;
+      width: 24rem;
       .image {
         align-self: center;
         width: 10rem;
       }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+@media screen and (max-width: 375px) {
+  .arkan-islam {
+    .arkan-heading {
+      width: 21rem;
     }
   }
 }

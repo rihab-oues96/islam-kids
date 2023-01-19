@@ -46,7 +46,6 @@
       }
     }
   }
-
   .logout {
     display: flex;
     flex-direction: row;
@@ -60,6 +59,7 @@
 
     &:hover {
       cursor: pointer;
+      transform: scale(1.055);
     }
     img {
       width: 1.5rem;

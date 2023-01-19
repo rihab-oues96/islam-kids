@@ -2,7 +2,6 @@
 
 .tasks {
   position: relative;
-  min-height: 100vh;
 
   .btn {
     display: flex;
@@ -16,6 +15,7 @@
 
     &:hover {
       cursor: pointer;
+      opacity: 0.8;
     }
     span {
       font-size: 1rem;
@@ -32,5 +32,16 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    animation: taskAnim 1s ease-in 0s 1 normal forwards;
+
+    @keyframes taskAnim {
+      0% {
+        transform: scale(0.5);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
   }
 }

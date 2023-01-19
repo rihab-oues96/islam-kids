@@ -22,10 +22,11 @@ const Signup = () => {
       await signUpHandler(email, password);
       logInHandler(email, password)
       setConfirm("تم التسجيل ");
-      navigate("/");
+    
       setInterval(() => {
         setConfirm("");
-      }, 3000);
+          navigate("/");
+      }, 2000);
     } catch (err) {
       console.log(err);
       setError(err.message);
