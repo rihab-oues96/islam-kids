@@ -7,6 +7,8 @@ import Login from "./pages/Login.js";
 import Signup from "./pages/Signup.js";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Navbar from "./layout/Navbar.js";
+import Error from "./pages/Error.js";
+
 import { useContext } from "react";
 import { AppContext } from "./context.js";
 
@@ -22,6 +24,7 @@ function App() {
         </Routes>
         {isNavbarOpen && <Navbar />}
         <Routes>
+          <Route path="*" element={<Error />} />
           <Route
             path="/tasks"
             element={
